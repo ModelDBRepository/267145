@@ -1,0 +1,11 @@
+There are two Matlab files here:
+
+1. W_vs_T_loop_AIF.m - has no plasticity it runs over different values of W and this results in differnt decay times T. 
+For runing LIF simply set gmax=0. Weight parameters would also need to be adjusted.
+Spikes rasters are simply plotted using imagesc, these images might be misleading. A better option is to use plotSpikeRaster.m (https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/45671/versions/4/previews/plotSpikeRaster.m/index.html)
+
+2. Network_training_AIF.m - has one trace synaptic plasticity learning. 
+It does not start with zero recurrent weights to reduce training epochs. 
+For LIF set gmax=0. 
+For training from scratch use: makenewnetwork=true;
+Data can be saved if savedata=true. Can run from the final state of a previous run using makenewnetwork=false;
